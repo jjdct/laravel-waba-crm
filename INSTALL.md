@@ -57,6 +57,15 @@ php artisan reverb:start
 php artisan queue:work
 ```
 
+**5. Servidor de Correos Local (Opcional - Mailpit)**
+Si necesitas probar el envío de correos (como el restablecimiento de contraseñas de los agentes) en tu entorno local, el sistema está preconfigurado para usar Mailpit. 
+Asegúrate de tenerlo instalado, inícialo en tu terminal y verifica que tu `.env` tenga los puertos correctos:
+```bash
+MAIL_MAILER=smtp
+MAIL_HOST=127.0.0.1
+MAIL_PORT=1025
+```
+
 ## 🔐 Primeros Pasos (El Búnker)
 Entra a http://localhost:8000 (o a tu dominio configurado).
 
@@ -64,5 +73,7 @@ Haz clic en Registrar Administrador. Al hacerlo, la ruta pública de registro se
 
 Ve a /settings e introduce el resto de tus credenciales de WhatsApp (Token EAAl, Phone ID, WABA ID) para conectar el CRM definitivamente.
 
-## Licencia
-Licencia: MIT
+## 📜 Licencia y Créditos
+Distribuido bajo la licencia **MIT**. Siéntete libre de usarlo, modificarlo y adaptarlo a tus necesidades.
+
+Hecho con ❤️ en Jalpa de Méndez por **Miku Peluche**, con la asistencia técnica y de arquitectura de **Gemini** (IA). Sobreviviendo a los firewalls, la complejidad de WebRTC y la burocracia de Meta. Codigo original de Juan Esteban (Wasapi).
